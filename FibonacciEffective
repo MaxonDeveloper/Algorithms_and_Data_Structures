@@ -1,0 +1,11 @@
+fun fibonacciEffective(input: Int): Long {
+    var buffer: Long = 0
+    var one: Long = 0
+    var two: Long = 1
+    repeat(input - 1) {
+        buffer = one
+        one = two
+        two = one + buffer
+    }
+    return two
+}
